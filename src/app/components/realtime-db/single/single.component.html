@@ -1,0 +1,33 @@
+<h2>Create, Read, Update, Delete data in a single item.</h2>
+
+<div class="json">
+  <h3>Single Item JSON View</h3>
+  <p>{{ item | async | json }}</p>
+</div>
+
+<div class="item-box">
+  <div class="single-item" *ngIf="item">
+    <h3>Title: {{ (item | async)?.title }}</h3>
+    <p>Size: {{ (item | async)?.size }}</p>
+    <p>Details: {{ (item | async)?.text }}</p>
+    <input [value]="(item | async)?.link" type="hidden" #link />
+    <a (click)="goToLink(link.value)">Link</a>
+    <div class="img-thumb">
+      <img [src]="[(item | async)?.poster]" [alt]="(item | async)?.title" [title]="(item | async)?.title" />
+    </div>
+  </div>
+
+  <div class="item-actions">
+    <input type="text" #singleTitle placeholder="Title" [value]="(item | async)?.title" />
+    <input type="text" #singleSize placeholder="Size" [value]="(item | async)?.size" />
+    <input type="text" #singleText placeholder="Text" [value]="(item | async)?.text" />
+    <input type="text" #singleLink placeholder="Link" [value]="(item | async)?.link" />
+    <input type="text" #singleImage placeholder="Image" [value]="(item | async)?.poster" />
+    <button (click)="save(singleTitle.value, singleSize.value, singleText.value, singleLink.value, singleImage.value)">SET SINGLE ITEM (destructive)</button>
+    <button (click)="update(singleTitle.value, singleSize.value, singleText.value, singleLink.value, singleImage.value)">UPDATE SINGLE ITEM</button>
+    <button (click)="delete()" class="delete">DELETE SINGLE ITEM</button>
+  </div>
+</div>
+
+<p>The <strong>set()</strong> method removes the fields that are not part of the object, that you are sending to the database, while the
+  update method only updates the fields, and doesn't remove additional fields.</p>

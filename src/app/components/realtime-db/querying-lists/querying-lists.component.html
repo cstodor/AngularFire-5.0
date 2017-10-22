@@ -1,0 +1,20 @@
+<h2>Querying lists with methods like: <em>orderByChild, orderByKey, orderByValue, equalTo, limitToFirst, limitToLast, startAt, endAt.</em></h2>
+
+<div class="json">
+  <h3>Items List JSON View</h3>
+  <p>{{ items | async | json }}</p>
+</div>
+
+  <ul class="items-list">
+    <li *ngFor="let item of items | async" class="item-box">
+      <h3>{{ item.title }}</h3>
+      <p>Key: {{item.key}}</p>
+      <p>Size: {{ item.size }}</p>
+      <p>Details: {{ item.text }}</p>
+      <a (click)="goToLink(item.link)">Link</a>
+      <div class="img-thumb">
+        <img [src]="item.poster" [alt]="item.title" [title]="item.title " />
+      </div>
+    </li>
+  </ul>
+  

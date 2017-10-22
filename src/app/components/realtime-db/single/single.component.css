@@ -1,0 +1,62 @@
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+a {
+    cursor: pointer;
+    color: #0c7eff;
+}
+a:hover {
+    text-decoration: underline;
+}
+.json {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+.item-box {
+    display: flex;
+    flex-direction: row;
+}
+.single-item,
+.item-actions {
+    flex: 1;
+}
+.single-item {
+    position: relative;
+    list-style: none;
+    border: 1px solid #eee;
+    background: #fafafa;
+    padding: 1rem;
+    padding-right: 0.75rem;
+    margin-bottom: 1rem;
+}
+.item-actions {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.75rem;
+}
+input {
+    margin-bottom: 1rem;
+    padding: 0.3rem;
+}
+.img-thumb {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.img-thumb > img {
+    height: 100%;
+}
+button {
+    border: 0;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+.delete {
+    background: #a80404;
+    color: #fff;
+}

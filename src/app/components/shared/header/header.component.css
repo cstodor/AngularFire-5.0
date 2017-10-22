@@ -1,0 +1,47 @@
+header {
+    display: flex;
+    padding: 1rem 0;
+    background: #eee;
+}
+.logo {
+    padding-left: 2rem;
+}
+.logo h1 {
+    cursor: pointer;
+}
+.logo h1,
+ul {
+    margin: 0;
+}
+ul.main-menu {
+    flex: 1;
+}
+li {
+    list-style: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    outline: none;
+    background: #fff;
+}
+li.active {
+    background: #0c7eff;
+    color: #fff;
+}
+
+/*User Info*/
+.user-info {
+    display: flex;
+    padding-right: 1rem;
+}
+.profile-img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+.profile-name {
+    line-height: 33px;
+    padding-left: 1rem;
+}

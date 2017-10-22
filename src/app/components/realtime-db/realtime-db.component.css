@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-direction: row;
+}
+
+#sidebar {
+    flex: 1;
+}
+
+#main-content {
+    flex: 4;
+    padding: 0 2rem;
+}

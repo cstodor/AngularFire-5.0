@@ -1,0 +1,13 @@
+<div *ngIf="afAuth.authState | async; let user; else showLogin">
+  <h1>Hello {{ user.displayName }}!</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+  <p>Please login.</p>
+  <button (click)="login('google')">Login with Google</button>
+  <button (click)="login('facebook')">Login with Facebook</button>
+  <button (click)="login('twitter')">Login with Twitter</button>
+  <button (click)="login('github')">Login with GitHub</button>
+  <button (click)="login('anonymous')">Login Anonymously</button>
+  <button (click)="login('email-password')" disabled>Login with Email/Password</button>
+</ng-template>

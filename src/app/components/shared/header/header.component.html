@@ -1,0 +1,14 @@
+<header>
+  <div class="logo">
+    <h1 routerLink="/">AngularFire Demo</h1>
+  </div>
+  <ul class="main-menu">
+    <li routerLink="realtime-db" routerLinkActive="active">Realtime Database</li>
+    <li routerLink="firestore" routerLinkActive="active">Cloud Firestore</li>
+  </ul>
+
+  <div class="user-info" *ngIf="afAuth.authState | async">
+    <img class="profile-img" [src]="[(currentUser|async)?.picture]" [alt]="(currentUser|async)?.name" [title]="(currentUser|async)?.name" /> 
+    <span class="profile-name">{{ (currentUser|async)?.name }}</span>
+  </div>
+</header>

@@ -1,0 +1,67 @@
+<h2>Create, Read, Update, Delete data in a list.</h2>
+<!-- <h3>AngularFireDatabase with valueChanges() method</h3>
+<p>
+  <strong>valueChanges()</strong> returns an Observable of data as a synchronized array of the JSON object. (async pipe uses with
+  this method)
+</p> -->
+
+<div class="json">
+  <h3>Items List JSON View</h3>
+  <p>{{ items | async | json }}</p>
+</div>
+
+<div class="list-box">
+  <ul class="items-list">
+    <li *ngFor="let item of items | async" class="item-box">
+      <h3>{{ item.title }}
+        <span>
+          <a (click)="toggleEditItemForm()">edit</a>
+        </span>
+      </h3>
+      <p>Key: {{item.key}}</p>
+      <p>Size: {{ item.size }}</p>
+      <p>Details: {{ item.text }}</p>
+      <a (click)="goToLink(item.link)">Link</a>
+      <div class="img-thumb">
+        <img [src]="item.poster" [alt]="item.title" [title]="item.title " />
+      </div>
+      <div class="remove" (click)="removeSingleItemFromList(item.key)">X</div>
+    </li>
+  </ul>
+
+  <div class="list-actions">
+    <input type="text" placeholder="Title" #pushTitle>
+    <input type="text" placeholder="Size" #pushSize>
+    <input type="text" placeholder="Details" #pushDetails>
+    <input type="text" value="https://website.com" disabled=true #pushLink>
+    <input type="text" value="https://screenshotlayer.com/images/assets/placeholder.png" disabled=true #pushImage>
+    <button (click)="pushItemToList(pushTitle.value, pushSize.value, pushDetails.value, pushLink.value, pushImage.value)">PUSH TO LIST</button>
+    <button (click)="removeAllItems()" class="delete">DELETE ALL ITEMS</button>
+  </div>
+</div>
+
+<div class="edit-form" *ngIf="isEditVisible">
+  <form [formGroup]="editItemForm">
+    <input type="text" placeholder="Title" formControlName="title" #setTitle>
+    <input type="text" placeholder="Size" formControlName="size" #setSize>
+    <input type="text" placeholder="Details" value="selectedItem.link" formControlName="details" #setDetails>
+    <input type="text" placeholder="Link" value="selectedItem.link" formControlName="link" #setLink>
+    <input type="text" placeholder="Image" value="selectedItem.poster" formControlName="image" #setImage>
+    <button (click)="setSingleItem(setTitle.value, setSize.value, setDetails.value, setLink.value, setImage.value)">SET</button>
+    <button (click)="updateSingleItem()">UPDATE</button>
+    <div class="remove" (click)="toggleEditItemForm()">X</div>
+  </form>
+</div>
+
+<!-- <p>
+  <strong>snapshotChanges()</strong> returns an Observable of data as a synchronized array of
+  <strong>AngularFireAction&lt;DatabaseSnapshot&gt;[]</strong>.</p>
+<p>
+  <strong>stateChanges()</strong> returns an Observable of the most recent changes as a
+  <strong>AngularFireAction[]</strong>.
+</p>
+<p>
+  <strong>auditTrail()</strong> returns an Observable of
+  <strong>AngularFireAction[]</strong> as they occur. Similar to stateChanges(), but instead it keeps around the trail of events
+  as an array.
+</p> -->

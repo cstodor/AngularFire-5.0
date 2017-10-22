@@ -1,0 +1,17 @@
+.sidebar {
+    /* background: #fafafa; */
+    border-right: 1px solid #ddd;   
+}
+ul {
+    padding: 0;
+}
+li {
+    padding: 0.3rem 0.5rem;
+    list-style: none;
+    cursor: pointer;
+}
+li:hover,
+li.active {
+    background: #0c7eff;
+    color: #fff;
+}

@@ -1,0 +1,52 @@
+h2 {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+h2 em {
+    font-weight: normal;
+}
+h3 span {
+    font-size: 1rem;
+    font-weight: normal;
+}
+h4 {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 0.5rem 0;
+}
+a {
+    cursor: pointer;
+    color: #0c7eff;
+}
+a:hover {
+    text-decoration: underline;
+}
+.json {
+    background: #eee;
+    border: 1px solid #ddd;
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+}
+.item-box {
+    position: relative;
+    list-style: none;
+    border: 1px solid #eee;
+    background: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.img-thumb {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+.img-thumb > img {
+    height: 100%;
+}
