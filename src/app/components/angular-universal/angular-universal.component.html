@@ -1,14 +1,7 @@
-<!-- FACTS
-<ul *ngIf="facts">
-  <li *ngFor="let fact of facts | async">
-    {{ fact.text }}
-  </li>
-</ul> -->
-USERS
-<ul *ngIf="users">
-  <li *ngFor="let user of users | async">
-      <!-- {{ repo.id }}
-      {{ repo.name }}
-      {{ repo.full_name }} -->
+<h2>My Git Repositories</h2>
+
+<ul *ngIf="repos">
+  <li *ngFor="let repo of repos | async">
+    {{ repo.id }} | {{ repo.name }} | {{ repo.full_name }}
   </li>
 </ul>

@@ -4,9 +4,8 @@ import { HttpClient } from "@angular/common/http";
 // RxJS
 import { Observable } from "rxjs/Observable";
 
-// const USERS_DATA = '../../../../../api/json/MOCK_DATA.json';
-
-const USERS_DATA = 'https://api.github.com/users/cstodor/repos'
+// Constants
+import { REPOS_LIST } from "../../constants";
 
 @Component({
   selector: 'app-angular-universal',
@@ -15,13 +14,13 @@ const USERS_DATA = 'https://api.github.com/users/cstodor/repos'
 })
 export class AngularUniversalComponent implements OnInit {
 
-  users: Observable<any>;
+  repos: Observable<any>;
 
   constructor(
     private http: HttpClient
   ) {
-    this.users = this.http.get(USERS_DATA);
-    console.log(this.users);
+    this.repos = this.http.get(REPOS_LIST);
+    console.log(this.repos);
     
   }
 

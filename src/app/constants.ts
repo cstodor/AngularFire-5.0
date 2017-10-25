@@ -7,3 +7,5 @@ export const RTDB_COLLECTIONS = {
 export const APP_DOMAIN = 'https://a4test-d6003.firebaseapp.com'
 
 export const FB_SHARE_APP_ID = '492898314425328';
+
+export const REPOS_LIST = 'https://api.github.com/users/cstodor/repos'
