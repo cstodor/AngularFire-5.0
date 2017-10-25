@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 
 // Firebase Firestore
 import { AngularFireModule } from 'angularfire2';
@@ -32,16 +33,17 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'firebase-angular-universal'}),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AppRoutingModule,
-    FacebookModule.forRoot()
+    FacebookModule.forRoot(),
+    HttpClientModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
