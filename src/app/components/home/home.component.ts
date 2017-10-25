@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 // Facebook Share
-import { FacebookService, UIParams, UIResponse, InitParams } from 'ngx-facebook';
+import { FacebookService, UIParams } from 'ngx-facebook';
 
 // Services
 import { AppService } from "../../app.service";

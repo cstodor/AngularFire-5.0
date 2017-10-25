@@ -11,9 +11,7 @@ export class AppService {
 
   constructor(
     private fb: FacebookService
-  ) {
-
-  }
+  ) { }
 
   initializeFbShare() {
     // Facebook Share App Config

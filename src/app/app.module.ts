@@ -12,7 +12,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 // Facebook Share
-import { FacebookService } from 'ngx-facebook';
+import { FacebookModule } from 'ngx-facebook';
 
 // Configs
 import { environment } from '../environments/environment';
@@ -41,8 +41,9 @@ import { HomeComponent } from './components/home/home.component';
     AngularFireAuthModule,
     AngularFireDatabaseModule,
     AppRoutingModule,
+    FacebookModule.forRoot()
   ],
-  providers: [AppService, FacebookService],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
