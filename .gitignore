@@ -43,4 +43,7 @@ testem.log
 .DS_Store
 Thumbs.db
 src/environments/environment.ts
-src/environments/environment.ts
+src/environments/environment.prod.ts
+functions/a4test-d6003-firebase-adminsdk-dtrz9-a3d3d194c5.json
+functions/src/environments/environment.js
+
