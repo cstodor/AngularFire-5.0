@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Firebase Firestore
 import { AngularFireModule } from 'angularfire2';
@@ -27,17 +28,16 @@ import { AppService } from "./app.service";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from "./components/shared/header/header.component";
 import { HomeComponent } from './components/home/home.component';
-import { MaterialDesignComponent } from './components/material-design/material-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
-    MaterialDesignComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
