@@ -8,6 +8,7 @@
     "build-ssr": "ng build --prod --aot -app 0 --output-hashing && ng build --prod --aot -app 1 --output-hashing",
     "build-ssr-dev": "ng build --aot -app 0 --output-hashing && ng build --aot -app 1 --output-hashing",
     "build-functions": "tsc -p ./server/tsconfig.functions.json",
+    "build-start-ssr": "ng build --prod --aot -app 0 --output-hashing && ng build --prod --aot -app 1 --output-hashing && tsc -p ./server/tsconfig.functions.json && firebase serve --only hosting,functions",
     "start-ssr": "firebase serve --only hosting,functions",
     "build": "ng build",
     "test": "ng test",
