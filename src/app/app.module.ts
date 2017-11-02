@@ -27,12 +27,14 @@ import { AppService } from "./app.service";
 import { AppComponent } from './app.component';
 import { HeaderComponent } from "./components/shared/header/header.component";
 import { HomeComponent } from './components/home/home.component';
+import { MaterialDesignComponent } from './components/material-design/material-design.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    MaterialDesignComponent
   ],
   imports: [
     BrowserModule,
