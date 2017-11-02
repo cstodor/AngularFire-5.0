@@ -1,0 +1,39 @@
+[debug] [2017-11-01T21:10:12.517Z] ----------------------------------------------------------------------
+[debug] [2017-11-01T21:10:12.520Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\csaba\AppData\Roaming\npm\node_modules\firebase-tools\bin\firebase serve --only hosting,functions
+[debug] [2017-11-01T21:10:12.520Z] CLI Version:   3.14.0
+[debug] [2017-11-01T21:10:12.520Z] Platform:      win32
+[debug] [2017-11-01T21:10:12.520Z] Node Version:  v6.11.3
+[debug] [2017-11-01T21:10:12.521Z] Time:          Wed Nov 01 2017 23:10:12 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:12.521Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-11-01T21:10:12.534Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-11-01T21:10:12.534Z] > authorizing via signed-in user
+[debug] [2017-11-01T21:10:12.537Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/a4test-d6003  
+ Wed Nov 01 2017 23:10:12 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:13.386Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-01T21:10:13.387Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/a4test-d6003/tokens  
+ Wed Nov 01 2017 23:10:13 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:14.161Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\csaba\Desktop\Learn\Firebase\AngularFire5.0'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2017-11-01T21:10:14.497Z] >>> HTTP REQUEST GET https://appengine.googleapis.com/v1/apps/a4test-d6003  
+ Wed Nov 01 2017 23:10:14 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:14.498Z] >>> HTTP REQUEST GET https://apikeys.googleapis.com/v1/projects/a4test-d6003/apiKeys  
+ Wed Nov 01 2017 23:10:14 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:14.499Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/a4test-d6003  
+ Wed Nov 01 2017 23:10:14 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:14.872Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-01T21:10:14.873Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/428388391138/clients/_:getWebAppConfig  
+ Wed Nov 01 2017 23:10:14 GMT+0200 (GTB Standard Time)
+[debug] [2017-11-01T21:10:15.420Z] <<< HTTP RESPONSE 200
+[debug] [2017-11-01T21:10:15.507Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: dist
+[info] +  hosting: Local server: http://localhost:5000
+
+[debug] [2017-11-01T21:10:15.565Z] <<< HTTP RESPONSE 200
+[warn] !  functions: Failed to load functions source code. Ensure that you have the latest SDK by running npm i --save firebase-functions inside the functions directory.
+[warn] !  functions: Error from emulator. FirebaseError: Error parsing triggers: Cannot find module 'grpc'
+
+Try running "npm install" in your functions directory before deploying.
