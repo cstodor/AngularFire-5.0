@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
 
+## To run app in production with SSR, all you need to do is:
+
+1. Build App and Server: `npm run build-ssr`
+2. Compile TS server file to JS: `npm run build-functions`
+3. Serve App: `npm run start-ssr`
+4. Open Browser, and navigate to `localhost:5000`
+
+Or you can use `npm run build-start-ssr` to build and start the app from one command.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
