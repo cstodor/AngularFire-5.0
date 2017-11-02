@@ -6,7 +6,7 @@ ul {
     padding: 0;
 }
 li {
-    padding: 0.3rem 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
     list-style: none;
     cursor: pointer;
 }

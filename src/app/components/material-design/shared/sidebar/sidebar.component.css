@@ -1,0 +1,16 @@
+button {
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    width: 100%;
+    text-align: left;
+}
+button.active {
+    background: #0c7eff;
+    color: #fff;
+}
+button:hover {
+    background: #53a4ff;
+    color: #fff;
+}
+mat-icon {
+    margin-right: 1rem;
+}

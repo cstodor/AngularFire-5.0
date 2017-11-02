@@ -1,11 +1,9 @@
+<!-- Sidebar Navigation -->
 <nav class="sidebar">
-  <!-- Sidebar Navigation -->
-  <mat-list class="sidenav">
-    <mat-list-item routerLink="/material-design" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
-      <mat-icon>home</mat-icon> Home
-    </mat-list-item>
-    <mat-list-item routerLink="chips" routerLinkActive="active">
-      <mat-icon>view_list</mat-icon> Chips
-    </mat-list-item>
-  </mat-list>
+  <button mat-raised-button routerLink="/material-design" [routerLinkActiveOptions]="{exact: true}" routerLinkActive="active">
+    <mat-icon>home</mat-icon> Home
+  </button>
+  <button mat-raised-button routerLink="chips" routerLinkActive="active">
+    <mat-icon>view_list</mat-icon> Chips
+  </button>
 </nav>

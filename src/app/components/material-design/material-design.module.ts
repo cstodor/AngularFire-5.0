@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // Material Design
-import { MatSidenavModule, MatIconModule, MatListModule } from "@angular/material";
+import { MatSidenavModule, MatIconModule, MatButtonModule } from "@angular/material";
 
 // Modules
 import { MaterialDesignRoutingModule } from "./material-design-routing.module";
@@ -19,7 +19,7 @@ import { ChipsComponent } from './chips/chips.component';
     MaterialDesignRoutingModule,
     MatSidenavModule, 
     MatIconModule,
-    MatListModule
+    MatButtonModule
   ],
   declarations: [
     MaterialDesignComponent,

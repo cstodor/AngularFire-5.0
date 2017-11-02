@@ -1,0 +1,20 @@
+mat-sidenav {
+    width: 230px;
+}
+#main-content {
+    flex: 4;
+    padding: 0 4rem;
+}
+  
+.sidenav-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border: 0;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+.mat-sidenav-container {
+    height: 100%;
+}

@@ -8,6 +8,7 @@ header {
 }
 .logo h1 {
     cursor: pointer;
+    font-size: 1.55rem;
 }
 .logo h1,
 ul {
@@ -15,6 +16,7 @@ ul {
 }
 ul.main-menu {
     flex: 1;
+    margin-left: 1rem;
 }
 li {
     list-style: none;
