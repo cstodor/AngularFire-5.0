@@ -10,7 +10,8 @@ const appRoutes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'realtime-db', loadChildren: 'app/components/realtime-db/realtime-db.module#RealtimeDbModule' },
-  { path: 'firestore', loadChildren: 'app/components/firestore/firestore.module#FirestoreModule' }
+  { path: 'firestore', loadChildren: 'app/components/firestore/firestore.module#FirestoreModule' },
+  { path: 'material-design', loadChildren: 'app/components/material-design/material-design.module#MaterialDesignModule' }
 ]
 
 @NgModule({

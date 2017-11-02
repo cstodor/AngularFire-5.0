@@ -1,3 +1,16 @@
-<p>
-  material-design works!
-</p>
+<mat-sidenav-container>
+  <!--Side Nav-->
+  <mat-sidenav #sidebar mode="side" opened="true">
+    <app-sidebar></app-sidebar>
+  </mat-sidenav>
+
+  <!-- Togggle Sidebar Button-->
+  <button class="sidenav-button" (click)="sidebar.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <!--Main Container-->
+  <div id="main-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
