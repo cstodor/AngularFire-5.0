@@ -1,20 +1,18 @@
 import 'zone.js/dist/zone-node';
-
 import * as functions from 'firebase-functions';
 import * as express from 'express';
-import { renderModuleFactory } from '@angular/platform-server';
-import { enableProdMode } from '@angular/core';
-import { environment } from "../src/environments/environment";
-enableProdMode();
 import * as fs from 'fs';
 import * as path from 'path';
-import * as admin from 'firebase-admin';
+import { renderModuleFactory } from '@angular/platform-server';
+import { enableProdMode } from '@angular/core';
+enableProdMode();
 
 // Firebase Admin SDK
+import * as admin from 'firebase-admin';
 const serviceAccountPath: any = 'a4test-d6003-firebase-adminsdk-dtrz9-a3d3d194c5.json';
 admin.initializeApp({
     credential: admin.credential.cert(path.join(__dirname, serviceAccountPath)),
-    databaseURL: environment.firebase.databaseURL
+    databaseURL: 'https://a4test-d6003.firebaseio.com'
 });
 
 const app = express(), router = express.Router();
